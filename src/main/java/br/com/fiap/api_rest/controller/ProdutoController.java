@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.UUID;
 
+
 @RestController
 @RequestMapping("/produtos")
 public class ProdutoController {
@@ -27,6 +28,7 @@ public class ProdutoController {
         this.produtoService = produtoService;
     }
 
+    @Deprecated
     @PostMapping
     public ResponseEntity<Produto> createProduto(@Valid @RequestBody ProdutoRequest produto) {
         Produto produtoSalvo = produtoService.create(produto);
